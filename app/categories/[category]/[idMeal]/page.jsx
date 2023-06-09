@@ -11,10 +11,6 @@ import { motion } from 'framer-motion';
 
 
 
-export const metadata = {
-    title: 'Meal details',
-};
-
 
 export default async function Page({ params: { idMeal } }) {
     const pathname = usePathname();
