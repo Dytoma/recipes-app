@@ -27,9 +27,9 @@ const Page = () => {
       </motion.div>
       <div>
         {
-          savedMeals.length ?
+          savedMeals?.length ?
             <motion.div variants={container} initial='hidden' whileInView='show' className='grid grid-cols-1 md:grid-cols-3 gap-x-7 md:gap-x-[2rem] lg:gap-x-9 gap-y-10 md:gap-y-16 lg:gap-y-20 mb-10 md:mb-16 lg:mb-20'>
-              {savedMeals.map((meal, id) => (
+              {savedMeals?.map((meal, id) => (
                 <motion.div variants={itemFade} key={id}>
                   <Meal meal={meal} category='saved' />
                 </motion.div>
