@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Prata&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+.background {
+  background: #fffbf7 url("/images/desktop-bg-img.png") no-repeat center;
+  background-size: cover;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* style the input's placeholder */
+
+input::placeholder {
+  color: #beb6b6;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.dark .background {
+  background: hsla(30, 18%, 7%, 1) url("/images/desktop-bg-img.png") no-repeat
+    center;
+  background-size: cover;
+}
+
+/* setting the background images for responsiveness */
+
+@media screen and (max-width: 1024px) {
+  .background {
+    background: #fffbf7 url("/images/tablet-bg-img.png") no-repeat center;
+    background-size: cover;
+  }
+  .dark .background {
+    background: hsla(30, 18%, 7%, 1) url("/images/tablet-bg-img.png") no-repeat
+      center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .background {
+    background: #fffbf7 url("/images/mobile-bg-img.png") no-repeat center;
+    background-size: cover;
+  }
+  .dark .background {
+    background: hsla(30, 18%, 7%, 1) url("/images/mobile-bg-img.png") no-repeat
+      center;
+    background-size: cover;
+  }
+}
+
+/* setting the footer background */
+.footer_bg {
+  background: #6a7572 url("/images/footer-bg-desktop.svg") no-repeat center;
+  background-size: cover;
+}
+
+.dark .footer_bg {
+  background: #14110e url("/images/footer-bg-desktop.svg") no-repeat center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer_bg {
+    background: #6a7572 url("/images/footer-bg-tablet.svg") no-repeat center;
+    background-size: cover;
+  }
+
+  .dark .footer_bg {
+    background: #14110e url("/images/footer-bg-tablet.svg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer_bg {
+    background: #6a7572 url("/images/footer-bg-mobile.svg") no-repeat center;
+    background-size: cover;
+  }
+
+  .dark .footer_bg {
+    background: #14110e url("/images/footer-bg-mobile.svg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+/* text gradient */
+.text_gradient {
+  background: linear-gradient(
+    90deg,
+    #f71510 38.97%,
+    #b51a9c 68.4%,
+    #9611e8 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-family: "Prata", serif;
+}
+
+.highlight_gradient {
+  background: linear-gradient(90deg, #fb9e42 50%, #f93e02 107.18%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.active_link {
+  background: linear-gradient(
+    90.08deg,
+    #f3a456 -0.01%,
+    #ee3a70 51.8%,
+    #ff0000 99.86%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* button gradient */
+
+.button_gradient {
+  background: linear-gradient(90deg, #693807 0%, #b5671a 51.01%, #ff9e3d 100%);
+  border-radius: 4px;
+}
+
+.btn_gradient {
+  background: #c21500; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffc500,
+    #c21500
+  ); 
+  background: linear-gradient(
+    to right,
+    #ffc500,
+    #c21500
+  );
+}
+
+
+/* logo styles */
+
+.logo_style {
+  @apply w-[77px] md:w-[130px] lg:w-[168px] h-[25px] md:h-[42px] lg:h-[56px];
+}
+
+.hover_link {
+  position: relative;
+}
+.hover_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  bottom: -12px;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, #f3a456, #ee3a70);
+  transition: all 0.3s ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+.hover_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: 0% 50%;
+}
+
+/* utility classes */
+.nav_link {
+  @apply text-textColor font-barlow font-medium tracking-[0.055em] text-xl md:text-[1.625rem] md:leading-8 lg:text-2xl dark:text-textLight;
+}
+
+.nav_link_active {
+  @apply font-barlow font-medium tracking-[0.055em] text-xl md:text-[1.625rem] md:leading-8 lg:text-2xl;
+}
+
+.flex_center {
+  @apply flex items-center justify-center;
+}
+
+.flex_end {
+  @apply flex items-end justify-end;
+}
+
+.footer_link {
+  @apply text-base md:text-xl font-medium font-barlow tracking-[0.055em] text-textLight;
+}
+
+.smooth_transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.header_3 {
+  @apply font-barlow font-semibold text-2xl text-[#313737] tracking-wider lg:text-[2rem] lg:leading-10 dark:text-white;
+}
+
+.page_layout {
+  @apply px-5 md:px-[45px] lg:px-40;
+}
+
+.grid_layout {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-x-5 md:gap-x-[1.875rem] lg:gap-x-6 gap-y-10 md:gap-y-14;
+}
+
+.hide {
+  @apply overflow-hidden;
+}
+
+.smooth_shadow {
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
+    0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+    0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
+    0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+    0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+    0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+/* mobile and tablet menu background styles */
+.glass_effect {
+  background: linear-gradient(
+    156.05deg,
+    rgba(0, 0, 0, 0.6) 3.5%,
+    rgba(0, 0, 0, 0.6) 97.04%
+  );
+  backdrop-filter: blur(20px);
+}
+
+.card_bg {
+  background: linear-gradient(
+    90deg,
+    #fffbf7 0%,
+    rgba(227, 213, 199, 0.4) 0.01%,
+    rgba(237, 220, 203, 0.1) 98.1%
+  );
+  border: 0.5px solid #fffbf7;
+  backdrop-filter: blur(16px);
+}
+
+.bg_blur {
+  border: 0.5px solid #fffbf7;
+}
+
+.filter_bg {
+  background: hsla(0, 0%, 12%, 0.6);
+  backdrop-filter: blur(14px);
+}
+
+.filter_animation {
+  transform-origin: 100% 100%;
+}
