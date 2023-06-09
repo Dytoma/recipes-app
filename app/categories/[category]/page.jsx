@@ -10,9 +10,6 @@ import getCategoriesMeals from '@libs/getCategoriesMeals';
 import { motion } from 'framer-motion';
 import { container, itemFade } from '@constants/constant';
 
-export const metadata = {
-    title: 'Categories meals',
-};
 
 
 export default async function Page({ params: { category } }) {
