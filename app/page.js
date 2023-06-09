@@ -9,9 +9,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { container, itemFade, itemFadeLeft, itemFadeRight, itemFadeUp } from '@constants/constant';
 
-export const metadata = {
-  title: 'Homepage recipes app',
-};
 
 export default function Home() {
   const [focus, setFocus] = useState(false);
