@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useContext, useEffect } from 'react';
-import { AppContext } from '@app/layout';
+import { AppContext } from '@components/AppLayout';
 import Meal from '@components/Meal';
 
 import { motion } from 'framer-motion';

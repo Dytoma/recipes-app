@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState, useContext, useEffect } from 'react';
-import { AppContext } from '@app/layout';
+import { AppContext } from './AppLayout';
 
 import { BsFillHeartFill } from 'react-icons/bs';
 import { motion } from 'framer-motion';

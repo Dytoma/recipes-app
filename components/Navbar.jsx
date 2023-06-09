@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { BsMoonFill, BsSun } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 
-import { AppContext } from '@app/layout';
+import { AppContext } from './AppLayout';
 
 import { usePathname } from 'next/navigation';
 import { itemFade, container } from '@constants/constant';
