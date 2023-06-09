@@ -12,7 +12,7 @@ const Page = () => {
 
   useEffect(() => {
     const savedItems = localStorage.getItem('meals');
-    const items = JSON.parse(savedItems);
+    const items = JSON.parse(savedItems) || [];
 
     setSavedMeals(items);
   }, [])
