@@ -22,10 +22,12 @@ const AppLayout = ({ children }) => {
 
         if (userTheme === 'dark' || (!userTheme && systemTheme)) {
             setDarkMode(true);
-            document.documentElement.classList.add('dark')
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('scrollbar');
         } else {
             setDarkMode(false);
             document.documentElement.classList.remove('dark');
+            document.body.classList.remove('scrollbar');
         }
     }, [])
 
