@@ -52,7 +52,7 @@ const Navbar = () => {
         >
           <Link href='/'>
             {darkMode ?
-              <Image src='/images/logo-dark.svg' width={168} height={56} alt='logo' className='logo_style' /> :
+              <Image src='/images/logo-dark.svg' width={168} height={56} alt='logo' className='logo_style' priority /> :
               <Image src='/images/logo-light.svg' width={168} height={56} alt='logo' className='logo_style' />
             }
           </Link>

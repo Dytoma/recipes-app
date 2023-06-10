@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className='pt-11 pb-16 md:pb-11 px-5 md:px-[45px] footer_bg'>
       <div className='flex_center flex-col gap-4 pb-5 hide'>
-        <Image src='/images/footer-logo.svg' alt='logo' width={128} height={42.18} />
+        <Image src='/images/footer-logo.svg' alt='logo' width={128} height={42.18} priority />
         <motion.p initial={{opacity: 0}} whileInView={{opacity: 1, y: [40, 0]}} transition={{duration: 0.5, ease: 'easeInOut'}} className='font-poppins text-sm tracking-[0.055em] md:text-lg text-[#D8D3D3] text-center'>Get all details of every meal in<br /> just one place</motion.p>
       </div>
       <div className='pt-6 pb-8 border-t-[1px] border-t-[#FFFBF7] lg:mx-[25rem]'>

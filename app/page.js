@@ -1,23 +1,14 @@
 'use client'
 
 import Image from 'next/image';
-import Filter from '@components/Filter';
+import SearchBar from '@components/SearchBar';
 import Categories from '@components/Categories';
-import { GoSearch } from 'react-icons/go';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { container, itemFade, itemFadeLeft, itemFadeRight, itemFadeUp } from '@constants/constant';
 
 
 export default function Home() {
-  const [focus, setFocus] = useState(false);
-
-  const focusStateOn = () => {
-    setFocus(true);
-
-    console.log(focus);
-  }
 
   return (
     <section className="page_layout">
@@ -37,7 +28,7 @@ export default function Home() {
           </div>
         </motion.div>
         <motion.div variants={itemFadeRight} className='min-w-[14rem] min-h-[14rem] md:min-w-[17.5rem] md:min-h-[17.5rem] lg:min-w-[28.5rem] lg:min-h-[28.5rem]'>
-          <Image src='/images/banner-img.png' width={456} height={456} alt='Banner Image' className='w-[14rem] h-[14rem] md:w-[17.5rem] md:h-[17.5rem] lg:w-[28.5rem] lg:h-[28.5rem]' />
+          <Image src='/images/banner-img.png' width={456} height={456} alt='Banner Image' className='w-[14rem] h-[14rem] md:w-[17.5rem] md:h-[17.5rem] lg:w-[28.5rem] lg:h-[28.5rem]' priority />
         </motion.div>
       </motion.div>
 
@@ -48,46 +39,8 @@ export default function Home() {
           </motion.h3>
         </div>
 
-        {!focus &&
-          <motion.form variants={itemFadeRight} action="" className='font-poppins'>
-            <div className='relative w-full md:w-auto'>
-              <label htmlFor="meal" className='absolute inset-y-5 md:inset-y-[1.125rem] lg:inset-y-[1.125rem] left-5 flex_center'>
-                <GoSearch className='md:text-xl text-base lg:text-2xl text-[#BEB6B6]' />
-              </label>
-              <input
-                type="text"
-                name="meal"
-                id="meal"
-                placeholder='Search for a meal'
-                className='bg-[#F7F6F6] dark:bg-darkRed md:text-base text-xl lg:text-2xl rounded-lg py-4 lg:py-[1.125rem] lg:pl-[4.5rem] pl-14 md:pl-[3.75rem] w-full md:w-80 lg:w-[29.125rem] outline-none dark:text-textLight'
-                onClick={focusStateOn}
-              />
-            </div>
-          </motion.form>
-        }
+        <SearchBar />
 
-        {focus &&
-          <Filter>
-            <form action="" className='font-poppins mx-5 mt-16 md:mt-[4.5rem] lg:mt-32 md:mx-auto'>
-              <div className='relative w-full md:w-auto'>
-                <label htmlFor="meal" className='absolute inset-y-5 md:inset-y-[1.125rem] lg:inset-y-[1.125rem] left-5 flex_center'>
-                  <GoSearch className='md:text-xl text-base lg:text-2xl text-[#BEB6B6]' />
-                </label>
-                <input
-                  type="text"
-                  name="meal" id="meal"
-                  placeholder='Search for a meal'
-                  className='bg-[#F7F6F6] dark:bg-darkRed md:text-base text-xl lg:text-2xl rounded-lg py-4 lg:py-[1.125rem] lg:pl-[4.5rem] pl-14 md:pl-[3.75rem] w-full md:w-[553px] lg:w-[776px] outline-none dark:text-textLight shadow-2xl'
-                  onKeyDown={(e) => {
-                    e.preventDefault;
-
-                    if (e.key === 'Enter') {
-                      setFocus(false)
-                    }
-                  }} />
-              </div>
-            </form>
-          </Filter>}
       </motion.div>
 
       <div>

@@ -4,6 +4,7 @@ import React from 'react';
 
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
+import ScrollToTop from './ScrollToTop';
 
 import { createContext, useState, useEffect } from 'react';
 
@@ -13,7 +14,8 @@ export const AppContext = createContext(null);
 const AppLayout = ({ children }) => {
     const [darkMode, setDarkMode] = useState(false);
     const [savedMeals, setSavedMeals] = useState([]);
-    const value = { darkMode, setDarkMode, savedMeals, setSavedMeals }
+    const [searchbar, setSearchbar] = useState(false);
+    const value = { darkMode, setDarkMode, savedMeals, setSavedMeals, searchbar, setSearchbar }
 
     //when the page load check if the user's system theme preference is set to dark. If so switch to dark mode. In the other case allow the user to set the dark mode manually.
     useEffect(() => {
@@ -40,6 +42,7 @@ const AppLayout = ({ children }) => {
                     {children}
                 </main>
                 <Footer />
+                <ScrollToTop />
             </body>
         </AppContext.Provider>
     )
