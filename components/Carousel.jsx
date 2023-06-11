@@ -4,7 +4,7 @@ import React, { useState, useContext } from 'react'
 import Filter from './Filter'
 import Image from 'next/image';
 import { container, itemFade } from '@constants/constant';
-import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
+import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 
 import { AppContext } from './AppLayout';
@@ -23,7 +23,7 @@ const Carousel = ({ results }) => {
                     <div className='carousel-container hide'>
                             <div className='w-full flex items-center smooth_transition' style={{ transform: `translateX(-${current * 100}%)` }}>
                             {results.map((item, id) => (
-                                <div className='flex flex-col md:flex-row bg-textLight rounded-2xl items-center gap-5 md:gap-8 lg:gap-10 min-w-full p-5' key={id}>
+                                <div className='flex flex-col md:flex-row bg-textLight dark:bg-darkRed rounded-2xl items-center gap-5 md:gap-8 lg:gap-10 min-w-full p-5' key={id}>
                                     <motion.div
                                         initial={{opacity: 0}}
                                         whileInView={{opacity: 1}}
@@ -41,11 +41,11 @@ const Carousel = ({ results }) => {
                         </div>
                     </div>
                     <div className='flex items-center justify-center gap-5 mt-6 md:mt-8 lg:mt-10'>
-                        <button type='button' className='p-2 rounded-full bg-white dark:bg-darkRed smooth_transition hover:opacity-50'>
-                            <GrFormPrevious className='text-xl text-textColor dark:text-textLight' onClick={prev} />
+                            <button type='button' className='p-2 rounded-full bg-white dark:bg-darkRed dark:text-textLight smooth_transition hover:opacity-50'>
+                            <BiChevronLeft className='text-xl text-textColor dark:text-textLight' onClick={prev} />
                         </button>
-                        <button type='button' className='p-2 rounded-full bg-white dark:bg-darkRed smooth_transition hover:opacity-50'>
-                            <GrFormNext className='text-xl text-textColor dark:text-textLight' onClick={next} />
+                            <button type='button' className='p-2 rounded-full bg-white dark:bg-darkRed dark:text-textLight smooth_transition hover:opacity-50'>
+                            <BiChevronRight className='text-xl text-textColor dark:text-textLight' onClick={next} />
                         </button>
                     </div>
                 </div>
