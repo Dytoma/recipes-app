@@ -3,7 +3,7 @@
 
 <h2 align='center'>Discover all the popular meals around and learn how to cook them.</h2>
 
-![Popular meals](https://ibb.co/xSCBqjk)
+<img src='./public/images/Thumbnail.png' alt='Thumbnail all meals' align='center' />
 
 <details>
   <summary>Table of Contents</summary>
@@ -78,8 +78,8 @@ You can start editing the pages. The pages auto-update as you edit the files.
 ## Code snippets
 Here are some code that I found useful while developing the app:
 
-<img src='./public/images/code.png' align='left' width='420' alt='fetch data' />
-<img src='./public/images/code2.png' align='right' width='400' alt='scroll to top' />
+<img src='./public/images/code.png' width='400' alt='fetch data' />
+<img src='./public/images/code2.png' width='400' alt='scroll to top' />
 
 ## Learn More
 
