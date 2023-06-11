@@ -15,7 +15,9 @@ const AppLayout = ({ children }) => {
     const [darkMode, setDarkMode] = useState(false);
     const [savedMeals, setSavedMeals] = useState([]);
     const [searchbar, setSearchbar] = useState(false);
-    const value = { darkMode, setDarkMode, savedMeals, setSavedMeals, searchbar, setSearchbar }
+    const [details, setDetails] = useState(false);
+    const [current, setCurrent] = useState(0);
+    const value = { darkMode, setDarkMode, savedMeals, setSavedMeals, searchbar, setSearchbar, details, setDetails, current, setCurrent }
 
     //when the page load check if the user's system theme preference is set to dark. If so switch to dark mode. In the other case allow the user to set the dark mode manually.
     useEffect(() => {

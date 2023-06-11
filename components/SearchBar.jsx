@@ -51,8 +51,8 @@ const SearchBar = () => {
 
             {
                 searchbar &&
-                <Filter>
-                    <div className='w-full md:w-[553px] lg:w-[776px] font-poppins mx-5 mt-16 md:mt-[4.5rem] lg:mt-32 md:mx-auto'>
+                <Filter container='search'>
+                    <div className='w-full md:w-[553px] lg:w-[776px] font-poppins mx-5 mt-24 md:mt-[4.5rem] lg:mt-32 md:mx-auto'>
                         <Combobox value={selectedMeal} onChange={setSelectedMeal}>
                             <div className='relative w-full'>
                                 <Combobox.Button className='absolute inset-y-5 md:inset-y-[1.125rem] lg:inset-y-[1.125rem] left-5 flex_center'>

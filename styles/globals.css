@@ -99,6 +99,10 @@ input::placeholder {
   background-size: cover;
 }
 
+.carousel-container {
+  width: calc(100vw - 160px);
+}
+
 /* setting the background images for responsiveness */
 
 @media screen and (max-width: 1024px) {
@@ -111,6 +115,9 @@ input::placeholder {
       center;
     background-size: cover;
   }
+  .carousel-container {
+    width: calc(100vw - 45px);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -122,6 +129,9 @@ input::placeholder {
     background: hsla(30, 18%, 7%, 1) url("/images/mobile-bg-img.png") no-repeat
       center;
     background-size: cover;
+  }
+  .carousel-container {
+    width: calc(100vw - 20px);
   }
 }
 
@@ -371,7 +381,6 @@ input::placeholder {
 .to-top {
   animation: scroll 2s ease-in-out infinite;
 }
-
 
 @keyframes scroll {
   0% {
