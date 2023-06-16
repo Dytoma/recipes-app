@@ -45,7 +45,7 @@ const Footer = () => {
           <motion.a variants={itemFade} href="https://www.themealdb.com/api.php" target='_blank'>
             <TbWorld className='hover:text-orange smooth_transition' />
           </motion.a>
-          <motion.a variants={itemFade} href="https://github.com/Dytoma/recipes-app">
+          <motion.a variants={itemFade} href="https://github.com/Dytoma/recipes-app" target='_blank'>
             <FaGithub className='hover:text-orange smooth_transition' />
           </motion.a>
         </div>

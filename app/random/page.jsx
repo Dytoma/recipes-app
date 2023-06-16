@@ -54,15 +54,15 @@ const Page = () => {
 
       {randomMeal &&
         <div className='my-5 md:my-8 hide'>
-          <motion.h3 className='header_3' initial={{ opacity: 0 }} whileInView={{ opacity: [0, 0.5, 1], y: ['40px', 0] }} transition={{ duration: 0.4, ease: 'easeIn' }}>Your random meal is <span className='highlight_gradient'>{randomMeal[0].strMeal}</span></motion.h3>
+          <motion.h3 className='header_3' initial={{ opacity: 0, y: '40px' }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: 'easeIn' }}>Your random meal is <span className='highlight_gradient'>{randomMeal[0].strMeal}</span></motion.h3>
         </div>
       }
 
 
       {
         !Boolean(randomMeal) && loading === '' &&
-        <motion.div className='my-5 md:my-8 lg:my-10 flex_center' initial={{ opacity: 0 }} whileInView={{ opacity: [0, 0.5, 1] }} transition={{ duration: 0.4, ease: 'easeIn', delay: 0.3 }}>
-          <Image src='/images/random.png' width={549} height={414} alt='Mystery box' className='object-contain w-full md:w-[549px] h-[235px] md:h-[414px]' />
+        <motion.div className='my-7 md:my-10 lg:my-14 flex_center' initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.4, ease: 'easeIn', delay: 0.3 }}>
+          <Image src='/images/img-random.png' width={549} height={414} alt='Mystery box' className='object-contain w-full md:w-[549px] h-[235px] md:h-[414px]' />
         </motion.div>
       }
       {
